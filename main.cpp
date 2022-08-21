@@ -24,11 +24,6 @@
  DEALINGS IN THE SOFTWARE.
  */
 
-// You are encouraged to challenge this code and notify me of issues :)
-// Compare this code with Programming 1 code to realize differences
-
-// From Model View perspective, this code mixes things. This makes real-life development harder due to coupling
-
 #include<vector>
 #include<queue>
 #include<set>
@@ -139,10 +134,6 @@ private:
 	string answer_text;			// empty = not answered
 
 public:
-	/*
-	 * How many conclassor arguments is too many?
-	 * 	https://stackoverflow.com/questions/40264/how-many-conclassor-arguments-is-too-many
-	 */
 	Question() :
 			question_id(-1), parent_question_id(-1), from_user_id(-1), to_user_id(-1), is_anonymous_questions(1) {
 	}
@@ -159,8 +150,6 @@ public:
 		question_text = substrs[5];
 		answer_text = substrs[6];
 	}
-
-	// It is more proper (or safer) to use the getters/setters in the class itself. For simplicity, I did not apply this in the code.
 
 	string ToString() const {
 		ostringstream oss;
@@ -401,12 +390,10 @@ public:
 
 	const map<int, vector<int> >& GetQuestionidQuestionidsTheadToMap() const {
 		return questionid_questionidsThead_to_map;
-		// Note no setter is provided / returned as const &
 	}
 
 	const vector<int>& GetQuestionsIdFromMe() const {
 		return questions_id_from_me;
-		// Note no setter is provided
 	}
 };
 
@@ -415,8 +402,6 @@ private:
 	// From question id to list of questions IDS on this question (thread questions) - All users
 	map<int, vector<int>> questionid_questionidsThead_to_map;
 
-	// Map the question id to question object. Let's keep one place ONLY with the object
-	// When you study pointers, easier handling
 	map<int, Question> questionid_questionobject_map;
 
 	int last_id;
@@ -451,7 +436,6 @@ public:
 		for (const auto &pair : questionid_questionidsThead_to_map) {	// pair<int, vector<Question>>
 			for (const auto &question_id : pair.second) {		//  vector<Question>
 
-				// Get the question from the map. & means same in memory, DON'T COPY
 				const Question &question = questionid_questionobject_map.find(question_id)->second;
 
 				if (question.GetFromUserId() == user.GetUserId())
