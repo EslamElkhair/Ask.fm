@@ -1,0 +1,3 @@
+/home/eslamelkhair/Desktop/Git/Ask.fm/build/CMakeFiles/Askme.dir
+/home/eslamelkhair/Desktop/Git/Ask.fm/build/CMakeFiles/edit_cache.dir
+/home/eslamelkhair/Desktop/Git/Ask.fm/build/CMakeFiles/rebuild_cache.dir

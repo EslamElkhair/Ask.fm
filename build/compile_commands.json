@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/eslamelkhair/Desktop/Git/Ask.fm/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/Askme.dir/main.cpp.o -c /home/eslamelkhair/Desktop/Git/Ask.fm/main.cpp",
+  "file": "/home/eslamelkhair/Desktop/Git/Ask.fm/main.cpp"
+},
+{
+  "directory": "/home/eslamelkhair/Desktop/Git/Ask.fm/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/Askme.dir/helpers.cpp.o -c /home/eslamelkhair/Desktop/Git/Ask.fm/helpers.cpp",
+  "file": "/home/eslamelkhair/Desktop/Git/Ask.fm/helpers.cpp"
+}
+]

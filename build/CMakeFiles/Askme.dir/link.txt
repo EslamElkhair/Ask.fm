@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/Askme.dir/main.cpp.o CMakeFiles/Askme.dir/helpers.cpp.o -o Askme 
